@@ -1,0 +1,39 @@
+.content-body > .frame-img > .title-frame-img-people{
+    position: absolute;
+    bottom: 20px;
+    margin: 4px 3px;
+    font-size: 1rem;
+    color: rgb(196, 90, 90);
+    font-weight: 500;
+}
+
+.content-body > .frame-img:nth-child(1) > .title-frame-img-people{
+    font-size: 2rem;
+    bottom: 60px;
+}
+
+.content-body > .frame-img:nth-child(1) > .author-frame-img-people{
+    display: block;
+}
+.content-body > .frame-img:nth-child(1) > .views-frame-img-people{
+    display: block;
+}
+
+.content-body > .frame-img > .author-frame-img-people{
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    margin: 4px 3px;
+    font-size: .9rem;
+    color: rgb(196, 90, 90);
+}
+.content-body > .frame-img > .views-frame-img-people{
+    position: absolute;
+    display: none;
+    bottom: 20px;
+    width: 100%;
+    text-align: right;
+    margin: 4px -10px;
+    font-size: .75rem;
+    color: rgb(196, 90, 90);
+}

@@ -84,7 +84,7 @@ const Siteinfo = () => {
                                     <div className="channel-card-body">
                                         <div className="title-channel">{i.name}</div>
                                     </div>
-                                    <div className='button-delete'><i class="bi bi-plus"></i></div>
+                                    <div className='button-delete'><i className="bi bi-plus"></i></div>
                                 </div>
                             </Col>
                         ))}

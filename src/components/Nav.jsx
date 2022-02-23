@@ -12,31 +12,32 @@ export default class Navbar extends Component {
                 >
 
                     <Col>
-                        <Nav
-                            className="justify-content-between m-0"
-                        >
-                            <Nav.Item>
-                                <Nav.Link href="#videos">Videos</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link href="#People">People</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link href="#Documents">Documents</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link href="#Events">Events</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link href="#Channels">Communities</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link href="#Channels">Favorites</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link href="#Channels">Channels</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
+                        <div className="nav-mobile">
+                            <Nav
+                            >
+                                <Nav.Item>
+                                    <Nav.Link href="#videos">Videos</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link href="#People">People</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link href="#Documents">Documents</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link href="#Events">Events</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link href="#Channels">Communities</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link href="#Channels">Favorites</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link href="#Channels">Channels</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        </div>
 
                     </Col>
                 </Row>

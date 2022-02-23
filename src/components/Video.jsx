@@ -25,10 +25,11 @@ const Video = () => {
         fetchData();
     }, [])
     return (
-        <Row className='mb-4'>
+        <Row className='mb-5'>
             <Col md={12}>
-                <div className="content-header">
-                    Videos
+                <div className="content-header" id='Videos'>
+                    <div className="title-content-header">Videos</div>
+                    <div className="view-all-header"><a href="#">Browse all videos</a></div>
                 </div>
             </Col>
             <Col md={12}>

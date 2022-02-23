@@ -21,10 +21,11 @@ const People = () => {
     }, [])
 
     return (
-        <Row className='mb-4'>
+        <Row className='mb-5'>
             <Col md={12}>
-                <div className="content-header">
-                    People
+                <div className="content-header" id='People'>
+                    <div className="title-content-header">People</div>
+                    <div className="view-all-header"><a href="#">View all</a></div>
                 </div>
             </Col>
             <Col md={12}>

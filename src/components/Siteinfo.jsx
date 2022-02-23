@@ -49,7 +49,8 @@ const Siteinfo = () => {
         <Row>
             <Col md={12} className="mb-4">
                 <div className="content-side-header">
-                    Activity
+                    <div className="title"> Activity</div>
+                    <div className="text-all">View timeline / Filter activities</div>
                 </div>
                 <div className="content-side-body mt-2">
                     {activity.map((i) => (
@@ -70,7 +71,9 @@ const Siteinfo = () => {
             </Col>
             <Col md={12}>
                 <div className="content-side-header">
-                    Channels
+                    <div className="title">Channels</div>
+                    <div className="text-all">Browse all channels</div>
+
                 </div>
                 <div className="content-side-body mt-2">
                     <Row>
@@ -81,7 +84,7 @@ const Siteinfo = () => {
                                     <div className="channel-card-body">
                                         <div className="title-channel">{i.name}</div>
                                     </div>
-                                    <div className='button-delete'><i class="bi bi-x"></i></div>
+                                    <div className='button-delete'><i class="bi bi-plus"></i></div>
                                 </div>
                             </Col>
                         ))}

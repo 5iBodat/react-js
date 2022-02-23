@@ -3,15 +3,15 @@ import { Row, Col } from "react-bootstrap";
 
 import axios from 'axios';
 
-import "../style/people.css";
+import "../style/document.css";
 
 const Documents = () => {
-    const [people, setPeople] = useState([]);
+    const [documents, setDocuments] = useState([]);
 
-    function fetchDataPeople() {
-        axios.get('https://62141c5389fad53b1f0af07f.mockapi.io/People')
+    function fetchData() {
+        axios.get('https://6215ea707428a1d2a3543079.mockapi.io/documents')
             .then(res => {
-                setPeople(res.data);
+                setDocuments(res.data);
             })
             .catch(err => {
                 console.log(err);
@@ -20,24 +20,25 @@ const Documents = () => {
     }
 
     useEffect(() => {
-        fetchDataPeople();
+        fetchData();
     }, [])
 
     return (
-        <Row className='mb-4'>
+        <Row className='mb-5'>
             <Col md={12}>
-                <div className="content-header">
-                    Documents
+                <div className="content-header" id="Documents">
+                    <div className="title-content-header">Documents</div>
+                    <div className="view-all-header"><a href="#">Browse all documents</a></div>
                 </div>
             </Col>
             <Col md={12}>
                 <div className="content-body">
-                    {people.map((person) => (
-                        <div className='frame-img' key={person.id}>
-                            <img src={person.avatar} alt="img-people" />
-                            <span className='title-frame-img-people'>{person.name}</span>
-                            <span className='author-frame-img-people'>{person.jobs}</span>
-                            <span className='views-frame-img-people'>{person.views} views</span>
+                    {documents.map((documents) => (
+                        <div className='frame-img' key={documents.id}>
+                            <img src={documents.img} alt="img-documents" />
+                            <span className='title-frame-img-docu'>{documents.name}</span>
+                            <span className='author-frame-img-docu'>{documents.author}</span>
+                            <span className='views-frame-img-docu'>{documents.views} views</span>
                         </div>
                     ))}
                     <div className='frame-img'>

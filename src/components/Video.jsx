@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from "react-player";
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import axios from 'axios';
 
@@ -36,9 +36,12 @@ const Video = () => {
                     {videos.map((video) => (
                         <div className='frame-img' key={video.id}>
                             <ReactPlayer
+                                onClickPreview={() => {
+                                    console.log('clicked');
+                                }}
                                 className="react-player"
                                 url={video.url}
-                                width="auto"
+                                width="100%"
                                 height="100%"
                                 controls
                             />

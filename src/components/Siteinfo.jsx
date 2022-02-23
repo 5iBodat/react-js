@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ReactPlayer from "react-player";
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import axios from 'axios';
 
-import "../style/video.css";
 import moment from 'moment';
 
 const Siteinfo = () => {
@@ -35,6 +33,14 @@ const Siteinfo = () => {
             });
     }
 
+    function deleteActivity(id, e) {
+        e.preventDefault();
+        axios.delete(`https://62141c5389fad53b1f0af07f.mockapi.io/activity/${id}`)
+            .then(res => {
+                fetchDataActivity();
+            })
+    }
+
     useEffect(() => {
         fetchDataActivity();
         fetchDataChannel();
@@ -47,12 +53,17 @@ const Siteinfo = () => {
                 </div>
                 <div className="content-side-body mt-2">
                     {activity.map((i) => (
-                        <div className="card card-activity flex-row text-white" key={i.id}><img className="card-img-sm-left example-card-img-responsive" src={i.avatar} />
+                        <div className="card card-activity flex-row text-white" key={i.id}>
+                            <img className="card-img-sm-left example-card-img-responsive" src={i.avatar} alt="profile-images" />
                             <div className="card-body card-body-activity">
-                                <h4 className="card-title h5 h4-sm ">{i.first_name} {i.last_name}</h4>
-                                <p className="card-text">{i.pesan}</p>
-                                <span className="card-text">{moment().startOf(i.createdAt).fromNow()}</span>
+                                <div className="card-name">
+                                    <div className="card-title h6 h4-sm ">{i.first_name} {i.last_name}</div>
+                                    <div className='status'>{i.status}</div>
+                                </div>
+                                <div className="card-text">{i.pesan}</div>
+                                <span className="card-text-momen">{moment().startOf(i.createdAt).fromNow()}</span>
                             </div>
+                            <div className='button-delete' onClick={(e) => deleteActivity(i.id, e)}><i class="bi bi-x"></i></div>
                         </div>
                     ))}
                 </div>
@@ -64,23 +75,21 @@ const Siteinfo = () => {
                 <div className="content-side-body mt-2">
                     <Row>
                         {channel.map((i) => (
-                            <Col md={6} sm={6} className="mb-4" key={i.id}>
+                            <Col md={6} sm={6} className="mb-4 col-6" key={i.id}>
                                 <div className="channel-card">
-                                    <img className="img" src={i.avatar} />
+                                    <img className="img" src={i.avatar} alt="avatar" />
                                     <div className="channel-card-body">
                                         <div className="title-channel">{i.name}</div>
                                     </div>
+                                    <div className='button-delete'><i class="bi bi-x"></i></div>
                                 </div>
                             </Col>
                         ))}
                     </Row>
                 </div>
             </Col>
-        </Row>
+        </Row >
     )
 }
 
 export default Siteinfo;
-
-
-// coba pake nth-child di css cardnya (nth-child(1))

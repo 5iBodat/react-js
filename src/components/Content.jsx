@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import ReactPlayer from "react-player";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Videos from "./Video";
 import People from "./People";

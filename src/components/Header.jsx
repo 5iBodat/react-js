@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 
-import { Container, Navbar, InputGroup, FormControl, Button } from 'react-bootstrap';
+import { Container, Navbar, Form, InputGroup, FormControl, Button } from 'react-bootstrap';
 
 
 
 export default class Header extends Component {
     render() {
         return (
-            <Navbar bg="transparant" className="mb-4">
 
+            <Navbar bg="transparant" expand="lg" variant="dark">
                 <Container>
-
                     <Navbar.Brand href="#home">
                         Social<span className="brand-white">Network</span>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <InputGroup>
+                    <Navbar.Toggle aria-controls="navbarScroll" />
+                    <Navbar.Collapse id="navbarScroll">
+
+                        <Form className="d-flex">
                             <FormControl
                                 placeholder="Find..."
                                 aria-label="Search"
@@ -24,13 +24,12 @@ export default class Header extends Component {
                                 className="search-input"
                             />
                             <InputGroup.Text id="basic-addon2"><i className="bi-search"></i></InputGroup.Text>
-                        </InputGroup>
+                        </Form>
                         <Button className="d-flex"><i className="bi bi-arrow-up"></i> Upload</Button>
                         <Button className="d-flex"><i className="bi bi-person"></i></Button>
-                        <span>Sahat</span>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar >
+            </Navbar>
 
         );
     }

@@ -1,6 +1,7 @@
 .content-body > .frame-img > .title-frame-img-people{
     position: absolute;
     bottom: 20px;
+    left: 0;
     margin: 4px 3px;
     font-size: 1rem;
     color: rgb(196, 90, 90);
@@ -23,6 +24,7 @@
     display: none;
     position: absolute;
     bottom: 20px;
+    left: 0;
     margin: 4px 3px;
     font-size: .9rem;
     color: rgb(196, 90, 90);
@@ -31,6 +33,7 @@
     position: absolute;
     display: none;
     bottom: 20px;
+    left: 0;
     width: 100%;
     text-align: right;
     margin: 4px -10px;
